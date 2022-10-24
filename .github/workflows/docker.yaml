@@ -1,5 +1,16 @@
 name: Docker
 
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+  workflow_dispatch:
+  release:
+    types: [published, edited]
+
 jobs:
   build-and-push-images:
     runs-on: ubuntu-latest
