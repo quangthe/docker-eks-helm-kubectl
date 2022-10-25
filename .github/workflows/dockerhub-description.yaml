@@ -6,7 +6,12 @@ on:
     paths:
       - README.md
       - .github/workflows/dockerhub-description.yaml
-
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "Notes"
+        required: false
+        default: "Manual trigger"
 jobs:
   dockerHubDescription:
     runs-on: ubuntu-latest
