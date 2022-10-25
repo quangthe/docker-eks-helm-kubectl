@@ -52,3 +52,13 @@ verify-my-cluster:
     - helm ls -A
   when: manual
 ```
+
+## Build
+
+Build local image: `make docker-build`
+
+```
+...
+=> => writing image sha256:ef69f9233f9cbb49099d80d01fcf46f129189427e78bf705b969387af47c17a5                        0.0s
+=> => naming to docker.io/pcloud/eks-helm-kubectl:main
+```
