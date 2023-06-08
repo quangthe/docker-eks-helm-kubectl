@@ -7,7 +7,7 @@ ARG IAM_AUTHTHENTICATOR_VERSION
 ARG TARGETOS
 ARG TARGETARCH
 
-RUN apk add --no-cache gomplate jq aws-cli
+RUN apk add --no-cache gomplate jq aws-cli-v2
 
 RUN wget -q https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v${IAM_AUTHTHENTICATOR_VERSION}/aws-iam-authenticator_${IAM_AUTHTHENTICATOR_VERSION}_${TARGETOS}_${TARGETARCH} -O /usr/local/bin/aws-iam-authenticator \
   && wget -q https://storage.googleapis.com/kubernetes-release/release/v${KUBE_VERSION}/bin/${TARGETOS}/${TARGETARCH}/kubectl -O /usr/local/bin/kubectl \
