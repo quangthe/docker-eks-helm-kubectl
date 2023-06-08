@@ -6,12 +6,15 @@
 
 Lightweight Docker image provide `kubectl` and `helm` for working with K8S cluster and specially AWS EKS cluster.
 
-## Supported tags
+## Supported versions
 
-- [1.24.7](https://github.com/quangthe/docker-eks-helm-kubectl/releases/tag/1.24.7) - kubectl v1.24.7, helm v3.9.4, aws-iam-authenticator 0.5.9, aws-cli 1.22.81, alpine 3.16
-- [1.23.13](https://github.com/quangthe/docker-eks-helm-kubectl/releases/tag/1.23.13) - kubectl v1.23.13, helm v3.8.2, aws-iam-authenticator 0.5.9, aws-cli 1.22.81, alpine 3.16
-- [1.22.15](https://github.com/quangthe/docker-eks-helm-kubectl/releases/tag/1.22.15) - kubectl v1.22.15, helm v3.8.2, aws-iam-authenticator 0.5.9, aws-cli 1.22.81, alpine 3.16
-- [1.21.12](https://github.com/quangthe/docker-eks-helm-kubectl/releases/tag/1.21.12) - kubectl v1.21.12, helm v3.8.2, aws-iam-authenticator 0.5.9, aws-cli 1.22.81, alpine 3.16
+| k8s  | helm   | aws-iam-authenticator | aws-cli |
+|------|--------|-----------------------|---------|
+| 1.25 | 3.10.3 | 0.6.2                 | 2.11.25 |
+| 1.24 | 3.9.4  | 0.5.9                 | 1.22.81 |
+| 1.23 | 3.8.2  | 0.5.9                 | 1.22.81 |
+| 1.22 | 3.8.2  | 0.5.9                 | 1.22.81 |
+| 1.21 | 3.8.2  | 0.5.9                 | 1.22.81 |
 
 ## Run
 
