@@ -50,5 +50,6 @@ jobs:
           build-args: |
             KUBE_VERSION=${{ env.KUBE_VERSION }}
             HELM_VERSION=${{ env.HELM_VERSION }}
+            IAM_AUTHTHENTICATOR_VERSION=${{ env.IAM_AUTHTHENTICATOR_VERSION }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
