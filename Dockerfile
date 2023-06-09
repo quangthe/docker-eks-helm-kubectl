@@ -17,9 +17,7 @@ RUN wget -q https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/do
   && kubectl version --client \
   && helm version
 
-RUN apk add --no-cache gomplate jq python3 py3-pip
-RUN  pip3 install --upgrade pip \
-  && pip3 install --no-cache-dir awscli
+RUN apk add --no-cache gomplate jq aws-cli
 
 WORKDIR /config
 
