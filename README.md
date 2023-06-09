@@ -4,7 +4,12 @@
 [![Docker Stars](https://img.shields.io/docker/stars/pcloud/eks-helm-kubectl.svg?style=flat)](https://hub.docker.com/r/pcloud/eks-helm-kubectl/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/pcloud/eks-helm-kubectl.svg?style=flat)](https://hub.docker.com/r/pcloud/eks-helm-kubectl/)
 
-Lightweight Docker image provide `kubectl` and `helm` for working with K8S cluster and specially AWS EKS cluster.
+This Docker image provide `kubectl` and `helm` for working with K8S cluster and specially AWS EKS cluster. 
+
+Usages:
+
+- CICD pipeline (Gitlab, Github, Jenkins...) to deploy helm chart or run kubectl commands.
+- Local development: Mount kubeconfig into container to work with K8S cluster.
 
 ## Supported versions
 
@@ -20,19 +25,12 @@ Lightweight Docker image provide `kubectl` and `helm` for working with K8S clust
 
 ### Local
 
-Quickly run helm/kubectl command
-
-```bash
-docker run --rm pcloud/eks-helm-kubectl helm version
-docker run --rm pcloud/eks-helm-kubectl kubectl version --client
-```
-
-By default kubectl will try to use `/root/.kube/config` file for connection to the kubernetes cluster, but does not exist by default in the image.
+By default, kubectl will try to use `/root/.kube/config` file for connection to the kubernetes cluster, but does not exist by default in the image.
 
 Mount host `~/.kube/config` to container for troubleshooting
 
 ```bash
-docker run --rm -it -v ~/.kube:/root/.kube pcloud/eks-helm-kubectl
+docker run --rm -it -v ~/.kube:/root/.kube pcloud/eks-helm-kubectl:1.25
 ```
 
 Get contexts inside container:: `/config # kubectl config get-contexts`
