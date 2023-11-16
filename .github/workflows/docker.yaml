@@ -23,7 +23,7 @@ jobs:
         run: cat .env >> ${GITHUB_ENV}
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: |
             pcloud/eks-helm-kubectl
