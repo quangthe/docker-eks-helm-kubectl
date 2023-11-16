@@ -8,7 +8,11 @@ include .env
 VARS:=$(shell sed -ne 's/ *\#.*$$//; /./ s/=.*$$// p' .env )
 $(foreach v,$(VARS),$(eval $(shell echo export $(v)="$($(v))")))
 DOCKER_IMAGE ?= pcloud/eks-helm-kubectl
-DOCKER_TAG ?= `git rev-parse --abbrev-ref HEAD`
+
+# get git tag
+# DOCKER_TAG ?= `git rev-parse --abbrev-ref HEAD`
+# or just simply use dev tag
+DOCKER_TAG:=dev
 
 docker_build:
 	@docker buildx build \
