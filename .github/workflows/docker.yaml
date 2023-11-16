@@ -5,6 +5,11 @@ on:
     branches:
       - main
       - releases/**
+    # only trigger docker build if the following files changed
+    paths:
+      - Dockerfile
+      - .env
+      - .github/workflows/docker.yaml
   pull_request:
     branches:
       - main
