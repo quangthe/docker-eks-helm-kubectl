@@ -33,7 +33,7 @@ jobs:
           images: |
             pcloud/eks-helm-kubectl
           tags: |
-            type=raw,enable=true,suffix=mainstream,value=1.26
+            type=raw,enable=true,suffix=-mainstream,value=1.26
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
